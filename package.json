@@ -3,6 +3,17 @@
   "version": "0.7.0",
   "description": "type-safe environment variable parser",
   "main": "index.js",
+  "files": [
+    "./lib/Env.d.ts",
+    "./lib/Env.js",
+    "./lib/Env.mjs",
+    "./package.json"
+  ],
+  "exports": {
+    "types": "./lib/Env.d.ts",
+    "require": "./lib/Env.js",
+    "import": "./lib/Env.mjs"
+  },
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
