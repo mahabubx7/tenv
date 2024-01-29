@@ -10,15 +10,15 @@
     "format": "prettier --write \"**/*.ts\"",
     "lint": "eslint \"src/**/*.ts\"",
     "lint:fix": "eslint \"src/**/*.ts\" --fix",
-    "prepare": "node .husky/install.js",
     "commit": "cz",
     "prepublishOnly": "npm run build",
-    "build": "tsup"
+    "build": "tsup",
+    "prepare": "node .husky/install.js"
   },
   "author": "Mahabub <mahabubx7@gmail.com>",
   "license": "MIT",
   "engines": {
-    "node": ">=16.20.2"
+    "node": ">=18"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
@@ -41,11 +41,11 @@
     "@types/dotenv": "^8.2.0",
     "@types/jest": "^29.5.11",
     "@types/node": "^20.11.10",
-    "@typescript-eslint/eslint-plugin": "^6.19.1",
-    "@typescript-eslint/parser": "^6.19.1",
+    "@typescript-eslint/eslint-plugin": "^6.20.0",
+    "@typescript-eslint/parser": "^6.20.0",
     "commitizen": "^4.3.0",
     "commitlint-config-gitmoji": "^2.3.1",
-    "cz-customizable": "^7.0.0",
+    "cz": "^1.8.2",
     "dotenv": "^16.4.1",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
@@ -53,11 +53,13 @@
     "husky": "^9.0.7",
     "jest": "^29.7.0",
     "lint-staged": "^15.2.0",
-    "nyc": "^15.1.0",
     "prettier": "^3.2.4",
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "dotenv": "^16.4.1"
   }
 }

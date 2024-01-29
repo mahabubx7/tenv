@@ -15,7 +15,6 @@ describe('class: Env test suite (unit)', () => {
   it('should return env:NAME value or undefined', () => {
     const name = env.key<string>('NAME').get();
     expect(typeof name).toBe('undefined');
-    console.log('env:NAME ', name);
     expect(name).toBeUndefined();
   });
 
