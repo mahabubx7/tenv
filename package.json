@@ -46,6 +46,7 @@
     "commitizen": "^4.3.0",
     "commitlint-config-gitmoji": "^2.3.1",
     "cz": "^1.8.2",
+    "cz-customizable": "^7.0.0",
     "dotenv": "^16.4.1",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",

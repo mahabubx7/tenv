@@ -14,12 +14,12 @@ class Env<T = unknown> {
 
   get isProduction(): boolean {
     const mode = String(this.parsed['NODE_ENV'] as string).toLowerCase();
-    return mode === 'production' ?? mode === 'prod';
+    return mode === 'production' || mode === 'prod';
   }
 
   get isDevelopment(): boolean {
     const mode = String(this.parsed['NODE_ENV'] as string).toLowerCase();
-    return mode === 'development' ?? mode === 'dev';
+    return mode === 'development' || mode === 'dev';
   }
 
   get isStaging(): boolean {
