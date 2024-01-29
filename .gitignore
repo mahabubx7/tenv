@@ -12,6 +12,11 @@ dist
 !.husky/commit-msg
 !.husky/install.js
 
+*.env*
+.env*
+.env
+!.env.example
+
 npm-debug.log
 *.swp
 *.swo
