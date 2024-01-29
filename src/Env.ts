@@ -106,7 +106,7 @@ class Env<T = unknown> {
     }
 
     const urlRegex =
-      /^(?:(?:[0-9]{1,3}\.){3}[0-9]{1,3})|(?:(?:(?:[a-fA-F0-9]{1,4}:){6}(?:[a-fA-F0-9]{1,4}:)?(?:[a-fA-F0-9]{1,4})?)|(?:[a-zA-Z0-9_-]+\.docker)|(?:[a-zA-Z0-9_-]+\.[a-zA-Z]{2,})|(?:[a-zA-Z]+:\/\/[^\s\/:$]+)(?::[0-9]{1,5})?)$/;
+      /^(?:(?:[0-9]{1,3}\.){3}[0-9]{1,3})|(?:(?:(?:[a-fA-F0-9]{1,4}:){6}(?:[a-fA-F0-9]{1,4}:)?(?:[a-fA-F0-9]{1,4})?)|(?:[a-zA-Z0-9_-]+\.docker)|(?:[a-zA-Z0-9_-]+\.[a-zA-Z]{2,})|(?:[a-zA-Z]+:\/\/[^\s:$]+)(?::[0-9]{1,5})?)$/;
 
     if (!this.value || !urlRegex.test(this.value as string)) {
       throw new Error('Invalid URL address!');
@@ -124,12 +124,8 @@ class Env<T = unknown> {
 
   integer(this: Env): Env<number> {
     this.checkNumber(this.value as string);
-    try {
-      this.value = parseInt(this.value as string, 10) as number;
-      return this as Env<number>;
-    } catch (err) {
-      throw err;
-    }
+    this.value = parseInt(this.value as string, 10) as number;
+    return this as Env<number>;
   }
 
   unsigned(this: Env): Env<number> {
