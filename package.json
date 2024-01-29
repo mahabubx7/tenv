@@ -24,7 +24,7 @@
     "commit": "cz",
     "prepublishOnly": "npm run build",
     "build": "tsup",
-    "prepare": "node .husky/install.js"
+    "prepare": "husky"
   },
   "author": "Mahabub <mahabubx7@gmail.com>",
   "license": "MIT",
@@ -32,7 +32,7 @@
     "node": ">=18"
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
+    "*.ts": [
       "eslint --fix",
       "prettier --write",
       "git add"
