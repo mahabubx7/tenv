@@ -39,24 +39,29 @@ class Env<T = unknown> {
     return this.value as T;
   }
 
+  key<K = string>(key: keyof typeof Env.prototype.value, factor: true): Env<K>;
   key<K = string>(
     key: keyof typeof Env.prototype.value,
-    required: true,
-  ): Env<K>;
-  key<K = string>(
-    key: keyof typeof Env.prototype.value,
-    required?: false,
+    factor?: false,
   ): Env<K | undefined>;
+  key<K = string>(key: keyof typeof Env.prototype.value, factor: K): Env<K>;
   key<K = string>(
     key: keyof typeof Env.prototype.value,
-    required: boolean = false,
+    factor: boolean = false,
   ): Env<K | undefined> {
     this.value = this.parsed[key as string] as T;
-    if (required && !this.value) {
+
+    if (typeof factor !== 'boolean' && typeof factor !== 'undefined') {
+      // return the default value
+      this.value = factor as K as unknown as T;
+      return this as unknown as Env<K>;
+    }
+
+    if (factor && !this.value) {
       throw new Error(`Environment variable ${key as string} is required!`);
     }
 
-    if (required) {
+    if (factor === true) {
       return this as unknown as Env<K>;
     }
 

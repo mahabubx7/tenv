@@ -16,6 +16,10 @@ module.exports = {
       name: '🔧 packages:\tAdded new packages to work next',
     },
     {
+      value: ':package: chore',
+      name: '📦️ chore:\tAdd or update version, patch, release',
+    },
+    {
       value: ':zap: perf',
       name: '⚡️ perf:\tCode change that improves performance',
     },

@@ -19,9 +19,16 @@ describe('class: Env test suite (unit)', () => {
   });
 
   it('should return env:PORT value as required!', () => {
-    const port = env.key<number>('PORT', true).integer().get();
+    const port = env.key<number>('PORT', true).integer().unsigned().get();
     expect(port).toBeTruthy();
     expect(typeof port).toBe('number');
+  });
+
+  it('should return env:PORT2 default value if got undefined!', () => {
+    const port = env.key<number>('PORT2', 3000).integer().unsigned().get();
+    expect(port).toBeTruthy();
+    expect(typeof port).toBe('number');
+    expect(port).toBe(3000);
   });
 
   it('should return env:ALLOW value as boolean', () => {

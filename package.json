@@ -1,6 +1,6 @@
 {
   "name": "@mx7/tenv",
-  "version": "0.7.2",
+  "version": "0.7.7",
   "description": "type-safe environment variable parser",
   "main": "./lib/index.js",
   "module": "./lib/index.mjs",
@@ -34,11 +34,11 @@
     "node": ">=18"
   },
   "repository": {
-    "url": "git+https://github.com/mahabub-alam/tenv.git",
+    "url": "git+https://github.com/mahabubx7/tenv.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/mahabub-alam/tenv/issues"
+    "url": "https://github.com/mahabubx7/tenv/issues"
   },
   "lint-staged": {
     "*.ts": [
