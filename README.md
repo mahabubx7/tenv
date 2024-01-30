@@ -1,6 +1,6 @@
 # Type-safe .env variable parser
 
-This package is a type-safe parser for.env files. It is built for node.js based typescript applications.
+This package is a type-safe parser for .env files. It is built for node.js based typescript applications.
 
 ### Installation
 
@@ -59,14 +59,13 @@ console.log(port); // i.e. 3000 as number
 | `unsigned()` | It will validate the passed value as unsigned number                                                                               | `n/a`                       |
 | `boolean()`  | It will validate the passed value as boolean                                                                                       | `n/a`                       |
 
-
 ### Author
 
 Made with ❤️ by [@mahabubx7](https://github.com/mahabubx7)
-
 
 ### Changelogs
 
 | Version       | Released At | Description                                                                              |
 | ------------- | ----------- | ---------------------------------------------------------------------------------------- |
+| v0.7.2 `beta` | 2024-01-31  | Added more supports and fixes small & minor issues with changes                          |
 | v0.7.0 `beta` | 2024-01-30  | `@mx7/tenv` with nodejs v18.x LTS or later compatible for type-safe .env variable parser |
