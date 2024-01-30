@@ -24,12 +24,19 @@
     "commit": "cz",
     "prepublishOnly": "npm run build",
     "build": "tsup",
-    "prepare": "node .husky/install.js"
+    "prepare": "husky"
   },
   "author": "Mahabub <mahabubx7@gmail.com>",
   "license": "MIT",
   "engines": {
     "node": ">=18"
+  },
+  "repository": {
+    "url": "https://github.com/mahabub-alam/tenv.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/mahabub-alam/tenv/issues"
   },
   "lint-staged": {
     "*.ts": [

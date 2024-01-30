@@ -59,9 +59,11 @@ console.log(port); // i.e. 3000 as number
 | `unsigned()` | It will validate the passed value as unsigned number                                                                               | `n/a`                       |
 | `boolean()`  | It will validate the passed value as boolean                                                                                       | `n/a`                       |
 
+
 ### Author
 
 Made with ❤️ by [@mahabubx7](https://github.com/mahabubx7)
+
 
 ### Changelogs
 
