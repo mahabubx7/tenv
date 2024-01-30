@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "module": "ES2022",
+    "target": "ES5",
+    "lib": ["ES5", "ES6", "ESNext"],
+    "module": "ESNext",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
