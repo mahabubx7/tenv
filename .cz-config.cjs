@@ -56,7 +56,11 @@ module.exports = {
   ],
 
   scopes: [
-    { name: 'schema' },
+    { name: 'version' },
+    { name: 'release' },
+    { name: 'patch' },
+    { name: 'stable' },
+    { name: 'beta' },
     { name: 'config' },
     { name: 'module' },
     { name: 'utils' },

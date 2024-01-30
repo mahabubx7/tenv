@@ -16,6 +16,17 @@
     "require": "./lib/index.js",
     "import": "./lib/index.mjs"
   },
+  "keywords": [
+    "env",
+    "type-safe env",
+    "typed-env",
+    "dotenv",
+    "environment variables",
+    "type-safe environment variables",
+    "tenv",
+    "tsenv",
+    "typedenv"
+  ],
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
