@@ -53,6 +53,7 @@ Made with ❤️ by [@mahabubx7](https://github.com/mahabubx7)
 
 | Version         | Released At | Description                                                                              |
 | --------------- | ----------- | ---------------------------------------------------------------------------------------- |
+| v1.0.0 `stable` | 2024-01-31  | Major stable release v1.x                                                                |
 | v0.7.7 `stable` | 2024-01-31  | First stable release with new feature => default value can attached with `key()` method  |
 | v0.7.2 `beta`   | 2024-01-31  | Added more supports and fixes small & minor issues with changes                          |
 | v0.7.0 `beta`   | 2024-01-30  | `@mx7/tenv` with nodejs v18.x LTS or later compatible for type-safe .env variable parser |

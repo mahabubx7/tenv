@@ -1,6 +1,6 @@
 {
   "name": "@mx7/tenv",
-  "version": "0.7.8",
+  "version": "1.0.0",
   "description": "type-safe environment variable parser",
   "main": "./lib/index.js",
   "module": "./lib/index.mjs",
