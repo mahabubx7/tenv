@@ -124,12 +124,8 @@ class Env<T = unknown> {
 
   integer(this: Env): Env<number> {
     this.checkNumber(this.value as string);
-    try {
-      this.value = parseInt(this.value as string, 10) as number;
-      return this as Env<number>;
-    } catch (err) {
-      throw err;
-    }
+    this.value = parseInt(this.value as string, 10) as number;
+    return this as Env<number>;
   }
 
   unsigned(this: Env): Env<number> {
@@ -152,4 +148,4 @@ class Env<T = unknown> {
 }
 
 /*===== Exports =====*/
-export default Env;
+export { Env };

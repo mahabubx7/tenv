@@ -1,4 +1,4 @@
-import Env from './Env';
+import { Env } from './Env';
 import 'dotenv/config';
 
 const env = new Env({ ...(process.env as Record<string, string>) });
