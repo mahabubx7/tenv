@@ -1,18 +1,20 @@
 {
   "name": "@mx7/tenv",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "type-safe environment variable parser",
-  "main": "index.js",
+  "main": "./lib/index.js",
+  "module": "./lib/index.mjs",
+  "types": "./lib/index.d.ts",
   "files": [
-    "./lib/Env.d.ts",
-    "./lib/Env.js",
-    "./lib/Env.mjs",
+    "./lib/index.d.ts",
+    "./lib/index.js",
+    "./lib/index.mjs",
     "./package.json"
   ],
   "exports": {
-    "types": "./lib/Env.d.ts",
-    "require": "./lib/Env.js",
-    "import": "./lib/Env.mjs"
+    "types": "./lib/index.d.ts",
+    "require": "./lib/index.js",
+    "import": "./lib/index.mjs"
   },
   "scripts": {
     "test": "jest",
@@ -32,7 +34,7 @@
     "node": ">=18"
   },
   "repository": {
-    "url": "https://github.com/mahabub-alam/tenv.git",
+    "url": "git+https://github.com/mahabub-alam/tenv.git",
     "type": "git"
   },
   "bugs": {
