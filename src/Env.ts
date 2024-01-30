@@ -148,4 +148,4 @@ class Env<T = unknown> {
 }
 
 /*===== Exports =====*/
-export default Env;
+export { Env };

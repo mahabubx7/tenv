@@ -1,0 +1,36 @@
+name: Tests
+
+on:
+  pull_request:
+    branches:
+      - main
+      - dev
+
+env:
+  FORCE_COLOR: 1
+
+jobs:
+  eslint:
+    name: Checking Tests
+    runs-on: ubuntu-22.04
+    env:
+      PORT: 7777
+      ALLOW: false
+      WEBSITE: https://mahabubx7.vercel.app
+      GITHUB: https://github.com/mahabubx7
+      WEB: google.com
+      HOST: 0.0.0.0
+      IPV6: fe80::1
+      LOCAL: http://127.0.0.1:5000
+      EMAIL: mahabubx7@gmail.com
+      EMAIL2: mahabubx7_gmail.com
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '18.x'
+      - name: Install all dependencies
+        run: npm install
+      - name: Test Report
+        run: npm test

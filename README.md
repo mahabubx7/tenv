@@ -1,5 +1,7 @@
 # Type-safe .env variable parser
 
+This package is a type-safe parser for.env files. It is built for node.js based typescript applications.
+
 ### Installation
 
 **Recommending NodeJS v18.x (LTS) or later**
@@ -17,44 +19,45 @@ $ pnpm add @mx7/tenv
 ### Sample Usages
 
 **ESM**
+
 ```typescript
-import 'dotenv/config' // peer dependency (if you are using dotenv)
-import Env from '@mx7/tenv'
+import 'dotenv/config'; // peer dependency (if you are using dotenv)
+import Env from '@mx7/tenv';
 
-const parsed = process.env as Record<string, string>
-const env = new Env(parsed) // instance of Env class
+const parsed = process.env as Record<string, string>;
+const env = new Env(parsed); // instance of Env class
 
-const port = env.key<number>('PORT', true).integer().unsigned().get()
+const port = env.key<number>('PORT', true).integer().unsigned().get();
 
-console.log(port) // i.e. 3000 as number
+console.log(port); // i.e. 3000 as number
 ```
 
 **CommonJs**
+
 ```typescript
-require('dotenv').config() // peer dependency (if you are using dotenv)
-const Env = require('@mx7/tenv')
+require('dotenv').config(); // peer dependency (if you are using dotenv)
+const Env = require('@mx7/tenv');
 
-const parsed = process.env as Record<string, string>
-const env = new Env(parsed) // instance of Env class
+const parsed = process.env as Record<string, string>;
+const env = new Env(parsed); // instance of Env class
 
-const port = env.key<number>('PORT', true).integer().unsigned().get()
+const port = env.key<number>('PORT', true).integer().unsigned().get();
 
-console.log(port) // i.e. 3000 as number
+console.log(port); // i.e. 3000 as number
 ```
 
 ### More Information
 
-| Method | Description | Action |
-| ------ | ----------- | --------------- |
-| `get()` | Get the value of the environment variable. Should be called at last as chained | value with<br>expected type |
-| `key()` | `key<T = string>(key: string, required?: boolean)` <br />Define the variable name as `key` & pass true next to it if it's required | `n/a` |
-| `email()` | It will validate the passed string as email | `n/a` |
-| `url()` | It will validate the passed string as url.<br>if it requires IPv6 address, do it as `url({ ipv6: true })` | `n/a` |
-| `integer()` | It will validate the passed value as integer | `n/a` |
-| `signed()` | It will validate the passed value as signed number | `n/a` |
-| `unsigned()` | It will validate the passed value as unsigned number | `n/a` |
-| `boolean()` | It will validate the passed value as boolean | `n/a` |
-
+| Method       | Description                                                                                                                        | Action                      |
+| ------------ | ---------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| `get()`      | Get the value of the environment variable. Should be called at last as chained                                                     | value with<br>expected type |
+| `key()`      | `key<T = string>(key: string, required?: boolean)` <br />Define the variable name as `key` & pass true next to it if it's required | `n/a`                       |
+| `email()`    | It will validate the passed string as email                                                                                        | `n/a`                       |
+| `url()`      | It will validate the passed string as url.<br>if it requires IPv6 address, do it as `url({ ipv6: true })`                          | `n/a`                       |
+| `integer()`  | It will validate the passed value as integer                                                                                       | `n/a`                       |
+| `signed()`   | It will validate the passed value as signed number                                                                                 | `n/a`                       |
+| `unsigned()` | It will validate the passed value as unsigned number                                                                               | `n/a`                       |
+| `boolean()`  | It will validate the passed value as boolean                                                                                       | `n/a`                       |
 
 
 ### Author

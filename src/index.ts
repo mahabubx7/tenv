@@ -1,1 +1,1 @@
-export const a = '';
+export { Env as default } from './Env';
