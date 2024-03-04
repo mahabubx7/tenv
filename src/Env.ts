@@ -122,7 +122,7 @@ class Env<T = unknown> {
 
   /*=== NUMBER ===*/
   private checkNumber(str: string): void {
-    if (!/^-?\d+$/.test(str)) {
+    if (!/^-?\d+(\.\d+)?$/.test(str)) {
       throw new Error('Invalid numbers!');
     }
   }
@@ -130,6 +130,12 @@ class Env<T = unknown> {
   integer(this: Env): Env<number> {
     this.checkNumber(this.value as string);
     this.value = parseInt(this.value as string, 10) as number;
+    return this as Env<number>;
+  }
+
+  float(this: Env): Env<number> {
+    this.checkNumber(this.value as string);
+    this.value = parseFloat(this.value as string) as number;
     return this as Env<number>;
   }
 
