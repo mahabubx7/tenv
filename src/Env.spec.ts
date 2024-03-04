@@ -31,6 +31,13 @@ describe('class: Env test suite (unit)', () => {
     expect(port).toBe(3000);
   });
 
+  it('should return env:FLOAT value as required!', () => {
+    const float = env.key<number>('FLOAT', true).float().get();
+    expect(float).toBeTruthy();
+    expect(typeof float).toBe('number');
+    expect(float).toBeCloseTo(3.14);
+  });
+
   it('should return env:ALLOW value as boolean', () => {
     const allow = env.key<boolean>('ALLOW', true).bool().get();
     expect(typeof allow).toBe('boolean');

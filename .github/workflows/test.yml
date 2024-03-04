@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-22.04
     env:
       PORT: 7777
+      FLOAT: 3.14
       ALLOW: false
       WEBSITE: https://mahabubx7.vercel.app
       GITHUB: https://github.com/mahabubx7
