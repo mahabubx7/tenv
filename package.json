@@ -69,6 +69,7 @@
   "devDependencies": {
     "@commitlint/cli": "^18.6.0",
     "@commitlint/config-conventional": "^18.6.0",
+    "@rollup/rollup-win32-x64-msvc": "^4.12.0",
     "@types/dotenv": "^8.2.0",
     "@types/jest": "^29.5.11",
     "@types/node": "^20.11.10",
